@@ -96,4 +96,6 @@ button:hover {
 
 .navigation {
   list-style-type: none; /* Rimuove il pallino nero visibile */
+  padding: 0;
+  margin: 0;
 }
