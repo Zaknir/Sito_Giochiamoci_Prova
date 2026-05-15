@@ -1,31 +1,95 @@
-/* Stile base dei link (già visto, con sottolineatura spessa) */
+/* CSS ACCESSBILE "GIOCHIAMOCI!"
+   Ottimizzato per: Dislessia e Daltonismo
+   Palette: Pergamena, Lilla Scuro, Verde Salvia, Giallo Ocra
+*/
+
+:root {
+  /* Colori estratti dal logo */
+  --bg-pergamena: #f4ead2; 
+  --text-lilla: #4a4e69;      /* Testo principale (ripariamo gli occhi) */
+  --text-scuro: #2d3047;      /* Titoli e bordi (contrasto massimo) */
+  --accent-green: #d1eac8;    /* Verde del controller */
+  --accent-yellow: #f9e2a3;   /* Giallo delle schede */
+  --visited-green: #5d7a52;   /* Verde scuro per link visitati */
+}
+
+/* IMPOSTAZIONI CORPO PAGINA */
+body {
+  background-color: var(--bg-pergamena);
+  color: var(--text-lilla);
+  /* Verdana è ideale per la dislessia: spaziatura ampia e caratteri chiari */
+  font-family: Verdana, Geneva, sans-serif;
+  
+  /* Ottimizzazione lettura */
+  line-height: 1.8;           /* Spazio generoso tra le righe */
+  letter-spacing: 0.12em;     /* Spazio tra le lettere */
+  word-spacing: 0.2em;        /* Spazio tra le parole */
+  
+  padding: 5% 10%;           /* Margini ampi per non affaticare la vista */
+  margin: 0;
+}
+
+/* TITOLI */
+h1, h2, h3 {
+  color: var(--text-scuro);
+  line-height: 1.3;
+  margin-top: 1.5em;
+  /* Segnale visivo extra per aiutare a scansionare la pagina */
+  border-left: 8px solid var(--accent-green);
+  padding-left: 15px;
+}
+
+/* PARAGRAFI E LISTE */
+p, li {
+  max-width: 70ch;            /* Evita righe troppo lunghe (difficili da seguire) */
+  margin-bottom: 1.5em;
+}
+
+/* GESTIONE LINK (ACCESSIBILITÀ AVANZATA) */
 a {
-  color: var(--lilla-logo);
+  color: var(--text-lilla);
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-  transition: all 0.2s ease; /* Rende il passaggio più fluido */
-  padding: 2px 4px; /* Crea un po' di spazio per il riquadro */
-  border: 2px solid transparent; /* Evita che il testo "salti" quando appare il bordo */
+  text-underline-offset: 4px;
+  font-weight: bold;
+  padding: 2px 4px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid transparent; /* Riserva lo spazio per il riquadro */
 }
 
-/* EFFETTO RIQUADRO AL PASSAGGIO (HOVER) */
-a:hover, a:focus {
-  background-color: var(--accent-yellow); /* Sfondo giallo dal logo */
-  border: 2px solid var(--lilla-logo);  /* Riquadro lilla scuro */
-  text-decoration: none;                /* Rimuove la sottolineatura per pulizia */
-  border-radius: 4px;                   /* Arrotonda leggermente gli angoli */
-  color: #1a1c2c;                       /* Scurisce leggermente il testo per contrasto */
-}
-
-/* LINK VISITATO */
-/* Usiamo il verde salvia del logo per indicare che ci sei già stato */
+/* Link visitato: colore diverso (verde scuro) per chiarezza */
 a:visited {
-  color: #5d7a52; /* Una versione più scura e leggibile del verde del controller */
+  color: var(--visited-green);
 }
 
-/* Assicuriamoci che anche se visitato, l'effetto riquadro funzioni */
-a:visited:hover {
+/* Effetto Riquadro al passaggio (Hover) e selezione tastiera (Focus) */
+a:hover, a:focus {
   background-color: var(--accent-yellow);
-  border: 2px solid var(--lilla-logo);
+  color: var(--text-scuro);
+  border: 2px solid var(--text-scuro);
+  text-decoration: none;      /* Pulizia visiva quando c'è il riquadro */
+  border-radius: 4px;
+  outline: none;              /* Rimuove l'outline standard a favore del nostro */
+}
+
+/* ELEMENTI EXTRA */
+button {
+  font-family: Verdana, sans-serif;
+  background-color: var(--accent-green);
+  color: var(--text-scuro);
+  border: 3px solid var(--text-scuro);
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: var(--accent-yellow);
+}
+
+/* Evidenziazione testo selezionato */
+::selection {
+  background: var(--accent-yellow);
+  color: var(--text-scuro);
 }
