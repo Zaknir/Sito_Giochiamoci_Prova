@@ -1,40 +1,31 @@
-:root {
-  /* Colori estratti dal logo */
-  --bg-pergamena: #f4ead2; 
-  --lilla-logo: #4a4e69;   /* Il viola/lilla dei bordi del logo */
-  --accent-green: #d1eac8;
-  --accent-yellow: #f9e2a3;
-}
-
-body {
-  background-color: var(--bg-pergamena);
-  /* Applichiamo il lilla al posto del nero */
-  color: var(--lilla-logo);
-  font-family: Verdana, Geneva, sans-serif;
-  line-height: 1.8;
-  letter-spacing: 0.12em;
-  word-spacing: 0.2em;
-  padding: 5%;
-  margin: 0;
-}
-
-h1, h2, h3 {
-  /* I titoli saranno di un viola leggermente più intenso */
-  color: #2d3047; 
-  border-left: 8px solid var(--accent-green);
-  padding-left: 15px;
-  text-transform: uppercase;
-}
-
+/* Stile base dei link (già visto, con sottolineatura spessa) */
 a {
   color: var(--lilla-logo);
   text-decoration: underline;
-  text-decoration-thickness: 3px;
-  font-weight: bold;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: all 0.2s ease; /* Rende il passaggio più fluido */
+  padding: 2px 4px; /* Crea un po' di spazio per il riquadro */
+  border: 2px solid transparent; /* Evita che il testo "salti" quando appare il bordo */
 }
 
-/* Un tocco extra: seleziona il testo con i colori del logo */
-::selection {
-  background: var(--accent-yellow);
-  color: var(--lilla-logo);
+/* EFFETTO RIQUADRO AL PASSAGGIO (HOVER) */
+a:hover, a:focus {
+  background-color: var(--accent-yellow); /* Sfondo giallo dal logo */
+  border: 2px solid var(--lilla-logo);  /* Riquadro lilla scuro */
+  text-decoration: none;                /* Rimuove la sottolineatura per pulizia */
+  border-radius: 4px;                   /* Arrotonda leggermente gli angoli */
+  color: #1a1c2c;                       /* Scurisce leggermente il testo per contrasto */
+}
+
+/* LINK VISITATO */
+/* Usiamo il verde salvia del logo per indicare che ci sei già stato */
+a:visited {
+  color: #5d7a52; /* Una versione più scura e leggibile del verde del controller */
+}
+
+/* Assicuriamoci che anche se visitato, l'effetto riquadro funzioni */
+a:visited:hover {
+  background-color: var(--accent-yellow);
+  border: 2px solid var(--lilla-logo);
 }
