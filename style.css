@@ -1,0 +1,40 @@
+:root {
+  /* Colori estratti dal logo */
+  --bg-pergamena: #f4ead2; 
+  --lilla-logo: #4a4e69;   /* Il viola/lilla dei bordi del logo */
+  --accent-green: #d1eac8;
+  --accent-yellow: #f9e2a3;
+}
+
+body {
+  background-color: var(--bg-pergamena);
+  /* Applichiamo il lilla al posto del nero */
+  color: var(--lilla-logo);
+  font-family: Verdana, Geneva, sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.12em;
+  word-spacing: 0.2em;
+  padding: 5%;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  /* I titoli saranno di un viola leggermente più intenso */
+  color: #2d3047; 
+  border-left: 8px solid var(--accent-green);
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--lilla-logo);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  font-weight: bold;
+}
+
+/* Un tocco extra: seleziona il testo con i colori del logo */
+::selection {
+  background: var(--accent-yellow);
+  color: var(--lilla-logo);
+}
