@@ -93,3 +93,7 @@ button:hover {
   background: var(--accent-yellow);
   color: var(--text-scuro);
 }
+
+.navigation {
+  list-style-type: none; /* Rimuove il pallino nero visibile */
+}
