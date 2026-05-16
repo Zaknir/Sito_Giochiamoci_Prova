@@ -1,152 +1,23 @@
-/* CSS ACCESSIBILE "GIOCHIAMOCI!" - VERSIONE CENTRATA CON NAVIGAZIONE ORIZZONTALE */
-
-:root {
-  --bg-pergamena: #f4ead2;    /* Sfondo esterno */
-  --bg-foglio: #fffcf5;       /* Sfondo contenitore (leggermente più chiaro) */
-  --text-lilla: #4a4e69;      /* Colore principale testo */
-  --text-scuro: #2d3047;      /* Titoli e bordi */
-  --accent-green: #d1eac8;    /* Verde controller */
-  --accent-yellow: #f9e2a3;   /* Giallo schede */
-  --visited-green: #5d7a52;   /* Link visitati */
-}
-
-/* 1. IMPOSTAZIONI BASE E CENTRATURA */
-body {
-  background-color: var(--bg-pergamena);
-  color: var(--text-lilla);
-  font-family: Verdana, Geneva, sans-serif;
+body{
+  background-color: lightgrey;
   margin: 0;
-  display: flex;
-  justify-content: center; /* Centra orizzontalmente */
-  padding: 40px 20px;
-  line-height: 1.8;
-  letter-spacing: 0.12em;
-  word-spacing: 0.2em;
+  padding: 0px;
+  margin:auto;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: purple;
+  font-size: 18px;            /* Dimensione consigliata tra 16px e 20px */
+  line-height: 1.5;           /* Interlinea ampia */
+  letter-spacing: 0.12em;     /* Spazio tra lettere */
+  word-spacing: 0.16em;       /* Spazio tra parole */
+  text-align: left;           /* MAI giustificato */
+  margin-bottom: 2em;         /* Spazio tra paragrafi */
+  max-width: 600px;            /* Righe non troppo lunghe (max 70 caratteri) */
 }
 
-/* 2. IL CONTENITORE CENTRALE */
-.container {
-  max-width: 850px;           /* Larghezza ottimale per la lettura */
-  width: 100%;
-  background-color: var(--bg-foglio);
-  padding: 40px;
-  border-radius: 20px;        /* Angoli morbidi come nel logo */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Ombra leggera professionale */
-}
-
-/* 3. TITOLI E TESTO */
-h1, h2, h3 {
-  color: var(--text-scuro);
-  border-left: 8px solid var(--accent-green);
-  padding-left: 15px;
-  margin-top: 1.5em;
-}
-
-p, li {
-  margin-bottom: 1.5em;
-}
-
-/* 4. LINK CON RIQUADRO E STATO VISITATO */
-a, summary {
-  color: var(--text-lilla);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-  font-weight: bold;
-  padding: 2px 6px;
-  border: 2px solid transparent;
-  transition: all 0.2s ease;
-}
-
-a:visited {
-  color: var(--visited-green);
-}
-
-a:hover, a:focus, summary:hover, summary:focus {
-  background-color: var(--accent-yellow);
-  color: var(--text-scuro);
-  border: 2px solid var(--text-scuro);
-  text-decoration: none;
-  border-radius: 4px;
-  outline: none;
-}
-
-/* 5. NAVIGAZIONE ORIZZONTALE (INTEGRAZIONE) */
-
-/* Allinea le voci principali del menu in orizzontale */
-.navigation {
-  display: flex;
-  flex-wrap: wrap;        /* Permette al menu di andare a capo su schermi piccoli senza rompersi */
-  gap: 20px;              /* Spazio orizzontale e verticale tra le voci */
-  list-style-type: none;  /* Rimuove i pallini neri */
-  padding: 0;
-  margin: 0 0 2em 0;      /* Margine inferiore per staccare la nav dal contenuto */
-}
-
-/* Rende i LI della barra principale il punto di riferimento per il posizionamento delle tendine */
-.navigation > li {
-  position: relative;
-  margin-bottom: 0;       /* Rimuove il margine inferiore standard dei LI per la barra principale */
-}
-
-/* Rende il tag summary un blocco cliccabile coerente */
-.navigation summary {
-  display: list-item;     /* Mantiene la freccetta nativa del browser */
-  cursor: pointer;
-}
-
-/* 6. SOTTOMENU A TENDINA (SUBNAVIGATION) */
-
-/* Rende la tendina fluttuante sopra il contenuto del foglio */
-.subnavigation {
-  position: absolute;
-  top: 100%;              /* Appare subito sotto la voce principale */
-  left: 0;
-  min-width: 250px;       /* Larghezza minima per evitare un ritorno a capo aggressivo del testo */
-  background-color: var(--bg-foglio); /* Usa lo stesso sfondo chiaro del foglio */
-  list-style-type: none;  /* Rimuove i pallini */
-  padding: 15px;
-  margin: 8px 0 0 0;
-  border: 2px solid var(--text-scuro); /* Bordo scuro coerente con lo stile */
-  border-radius: 10px;    /* Angoli arrotondati coerenti */
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.1); 
-  z-index: 100;           /* Sovrasta il testo del tag <main> */
-}
-
-/* Dispone le voci interne della tendina in verticale, una sotto l'altra */
-.subnavigation li {
-  margin-bottom: 12px;
-  line-height: 1.4;       /* Compatta leggermente l'interlinea nel sottomenu */
-}
-
-.subnavigation li:last-child {
-  margin-bottom: 0;       /* Rimuove il margine dall'ultima voce */
-}
-
-/* Rende i link interni alla tendina dei blocchi per facilitare il clic */
-.subnavigation a {
-  display: block;
-  padding: 4px 6px;
-}
-
-/* 7. BOTTONI */
-button {
-  font-family: Verdana, sans-serif;
-  background-color: var(--accent-green);
-  color: var(--text-scuro);
-  border: 3px solid var(--text-scuro);
-  padding: 12px 24px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-button:hover {
-  background-color: var(--accent-yellow);
-}
-
-/* SELEZIONE TESTO */
-::selection {
-  background: var(--accent-yellow);
-  color: var(--text-scuro);
+header, section, footer {
+  background-color:antiquewhite;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
 }
