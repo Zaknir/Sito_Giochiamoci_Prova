@@ -13,35 +13,38 @@
 
         <!-- **QUESTO E' IL MENU DI NAVIGAZIONE** -->
         <nav>
-            <ul class="menu-principale">
-                <li><a href="#chi-siamo">Chi Siamo</a></li>
-                
-                <!-- SOTTO-MENÙ 1: GIOCA CON NOI -->
-                <li class="voce-tendina">
-                    <button class="bottone-menu" aria-expanded="false">Gioca con noi ▼</button>
-                    <ul class="tendina">
-                        <li><a href="#escape">Escape Room</a></li>
-                        <li><a href="#giochi-da-tavolo">Giochi da Tavolo</a></li>
-                        <li><a href="#giochi-di-ruolo">Giochi di Ruolo</a></li> 
-                    </ul>
-                </li>
-                
-                <!-- SOTTO-MENÙ 2: PROGETTO ACCESSIBILE -->
-                <li class="voce-tendina">
-                    <button class="bottone-menu" aria-expanded="false">Progetto accessibile ▼</button>
-                    <ul class="tendina">
-                        <li><a href="#accessible">Capire l'accessibilità</a></li>
-                        <li><a href="#videogiochi">Progettare videogiochi</a></li>
-                        <li><a href="#acc-giochi-da-tavolo">Progettare giochi da tavolo</a></li> 
-                    </ul>
-                </li>
-                
-                <li><a href="#sostegno">Sostienici</a></li>
-                <li><a href="#rete">Scopri la rete</a></li>
-                <li><a href="#contatti">Contatti</a></li>
-            </ul>
-        </nav>
+            <!-- SEZIONE: MENU PRINCIPALE -->
+            <details>
+                <summary>Menu Principale</summary>
+                <ul class="menu-principale">
+                    <li><a href="#chi-siamo">Chi Siamo</a></li>             
+                    <li><a href="#sostegno">Sostienici</a></li>
+                    <li><a href="#rete">Scopri la rete</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </details>
         
+            <!-- SEZIONE: GIOCA CON NOI -->
+            <details>
+                <summary>Gioca con noi</summary>
+                <ul id="gioca-con-noi">
+                    <li><a href="#escape">Escape Room</a></li>
+                    <li><a href="#giochi-da-tavolo">Giochi da Tavolo</a></li>
+                    <li><a href="#giochi-di-ruolo">Giochi di Ruolo</a></li> 
+                </ul>
+            </details>
+        
+            <!-- SEZIONE: PROGETTO ACCESSIBILE -->
+            <details>
+                <summary>Progetto Accessibile</summary>
+                <ul id="progetto-accessibile">
+                    <li><a href="#accessible">Capire l'accessibilità</a></li>
+                    <li><a href="#videogiochi">Progettare videogiochi</a></li>
+                    <li><a href="#acc-giochi-da-tavolo">Progettare giochi da tavolo</a></li>    
+                </ul>
+            </details>
+        </nav>
+
     </header>
     <main>
         <!-- **SEZIONE CHI SIAMO** -->
