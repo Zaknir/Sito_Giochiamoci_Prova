@@ -10,40 +10,44 @@
     <header>
         <h1>Giochiamoci! APS</h1>
         <p>Perchè anche giocare è un diritto di tutti!</p>
+
+        <!-- **QUESTO E' IL MENU DI NAVIGAZIONE** -->
         <nav>
-            <ul>
+            <ul class="menu-principale">
                 <li><a href="#chi-siamo">Chi Siamo</a></li>
-                <li>
-                    <details>
-                        <summary>Gioca con noi</summary>
-                        <ul>
-                            <li><a href="#escape">Escape Room</a></li>
-                            <li><a href="#giochi-da-tavolo">Giochi da Tavolo</a></li>
-                            <li><a href="#giochi-di-ruolo">Giochi di Ruolo</a></li> 
-                        </ul>
-                    </details>
+                
+                <!-- SOTTO-MENÙ 1: GIOCA CON NOI -->
+                <li class="voce-tendina">
+                    <button class="bottone-menu" aria-expanded="false">Gioca con noi ▼</button>
+                    <ul class="tendina">
+                        <li><a href="#escape">Escape Room</a></li>
+                        <li><a href="#giochi-da-tavolo">Giochi da Tavolo</a></li>
+                        <li><a href="#giochi-di-ruolo">Giochi di Ruolo</a></li> 
+                    </ul>
                 </li>
-                <li>
-                    <details>
-                        <summary>Progetto accessibile</summary>
-                        <ul>
-                            <li><a href="#accessibilità">Capire l'accessibilità</a></li>
-                            <li><a href="#videogiochi">Progettare videogiochi</a></li>
-                            <li><a href="#acc-giochi-da-tavolo">Progettare giochi da tavolo</a></li> 
-                        </ul>
-                    </details>
+                
+                <!-- SOTTO-MENÙ 2: PROGETTO ACCESSIBILE -->
+                <li class="voce-tendina">
+                    <button class="bottone-menu" aria-expanded="false">Progetto accessibile ▼</button>
+                    <ul class="tendina">
+                        <li><a href="#accessible">Capire l'accessibilità</a></li>
+                        <li><a href="#videogiochi">Progettare videogiochi</a></li>
+                        <li><a href="#acc-giochi-da-tavolo">Progettare giochi da tavolo</a></li> 
+                    </ul>
                 </li>
+                
                 <li><a href="#sostegno">Sostienici</a></li>
                 <li><a href="#rete">Scopri la rete</a></li>
                 <li><a href="#contatti">Contatti</a></li>
             </ul>
         </nav>
+        
     </header>
     <main>
         <!-- **SEZIONE CHI SIAMO** -->
         <section id="chi-siamo">
             <h2>Chi Siamo</h2>
-            <p>Giochiamoci è nata quando la nostra presidente, non vedente,si è trovata davanti all’ennesima escape room non accessibile. Noi, come lei, siamo giocatrici da sempre, e quando ci  ha coinvolte nel costruirne una senza barriere, abbiamo accolto la sfida.</p>
+            <p>Giochiamoci è nata quando la nostra presidente, non vedente, si è trovata davanti all’ennesima escape room non accessibile. Noi, come lei, siamo giocatrici da sempre, e quando ci  ha coinvolte nel costruirne una senza barriere, abbiamo accolto la sfida.</p>
             <p>Oggi adattiamo giochi da tavolo, promuoviamo giochi di ruolo e offriamo consulenze sull’accessibilità videoludica cercando di renderci accessibili al maggior numero di diversità, perché  il gioco è un incredibile motore di socializzazione e vogliamo che le persone con disabilità possano beneficiarne come le altre. Ne approfittiamo anche per parlare di inclusività in un contesto libero dalle pressioni che si incontrano a scuola o sul lavoro. Soprattutto, facciamo quello che ci piace, condividere la nostra passione.</p>
             <h3>Il nostro concetto di accessibilità</h3>
             <p>Per noi accessibilità significa dare a ciascuna gli strumenti giusti per interagire con l’ambiente. Nelle nostre escape room c’è spazio per chi esplora con la vista, per chi ascolta, per chi cammina e per chi si muove in sedia a rotelle, così come nei giochi da tavolo e di ruolo partecipano fianco a fianco chi comunica a voce con chi comunica per iscritto, chi tira i dadi con la tecnologia e chi preferisce farli tirare ad altri.</p>
@@ -86,7 +90,7 @@
         </section>
 
          <!-- **SEZIONE CAPIRE L'ACCESSIBILITÀ** -->
-        <section id="accessibilità">
+        <section id="accessible">
             <h2>Capire l'accessibilità: Un approccio inclusivo</h2>
             <p>Offriamo risorse e consulenze per comprendere e implementare l'accessibilità nei giochi. Organizziamo workshop, webinar e sessioni di formazione per sviluppatori, designer e appassionati di giochi, fornendo strumenti pratici e strategie per creare esperienze di gioco inclusive. Promuoviamo la consapevolezza sull'importanza dell'accessibilità nel mondo dei giochi, sensibilizzando la comunità e incoraggiando un cambiamento positivo.</p>
         </section>

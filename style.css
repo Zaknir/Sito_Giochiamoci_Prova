@@ -12,7 +12,7 @@ body{
   word-spacing: 0.16em;       /* Spazio tra parole */
   text-align: left;           /* MAI giustificato */
   margin-bottom: 2em;         /* Spazio tra paragrafi */
-  max-width: 600px;            /* Righe non troppo lunghe (max 70 caratteri) */
+  max-width: 70ch;            /* Righe non troppo lunghe (max 70 caratteri) */
 }
 
 header, section, footer {
@@ -31,4 +31,32 @@ header, section, footer {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Di base le tendine sono nascoste */
+.tendina {
+    display: none;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f4ebd9; /* Il tuo colore pergamena */
+    border: 1px solid #ccc;
+}
+
+/* Mostra la tendina SOLO quando il bottone è cliccato (:focus) 
+   o quando la tastiera è attiva dentro la voce (:focus-within) */
+.voce-tendina:focus-within .tendina {
+    display: block;
+}
+
+/* Stile base per far sembrare il bottone un elemento del menù */
+.bottone-menu {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
 }
