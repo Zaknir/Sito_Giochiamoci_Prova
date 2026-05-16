@@ -60,3 +60,60 @@ html {
     cursor: pointer;
     padding: 0;
 }
+
+/* 1. Forza le scritte (label) ad andare a capo e crea un po' di spazio sotto */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Opzionale: rende le etichette più leggibili */
+}
+
+/* 2. Allarga i campi di testo al massimo della sezione e li manda a capo */
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    display: block;
+    width: 100%; /* Occupa tutta la larghezza della section */
+    box-sizing: border-box; /* FONDAMENTALE: include padding e bordi nel calcolo del 100% */
+    padding: 10px; /* Spazio interno per non far toccare il testo ai bordi */
+    margin-bottom: 15px; /* Spazio tra un campo e l'altro */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 3. Stile base per il bottone di invio (opzionale) */
+form button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* 1. Allinea il logo a sinistra e il blocco testi a destra */
+.header-main-box {
+    display: flex;
+    align-items: center; /* Centra verticalmente il logo rispetto all'intero blocco di testo */
+    gap: 30px;           /* Spazio orizzontale tra il logo e i testi */
+}
+
+/* 2. Forza i testi a svilupparsi dall'alto verso il basso (colonna) */
+.testi-header {
+    display: flex;
+    flex-direction: column; 
+    gap: 5px;            /* Spazio verticale tra l'H1 e il motto */
+}
+
+/* 3. Pulizia dei margini predefiniti dei testi per evitare disallineamenti */
+.testi-header h1,
+.testi-header .motto {
+    margin: 0;
+}
+
+/* 4. Dimensioni del logo */
+.logo {
+    max-height: 200px;    /* Regola l'altezza in base a quanto vuoi grandi i testi */
+    width: auto;
+}
+
+nav {
+  margin-top: 20px;
+}

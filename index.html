@@ -8,8 +8,18 @@
 </head>
 <body>
     <header>
-        <h1>Giochiamoci! APS</h1>
-        <p>Perchè anche giocare è un diritto di tutti!</p>
+        <!-- Contenitore principale per affiancare Logo e Testi -->
+        <div class="header-main-box">
+            
+            <img src="logo_defcolori-sito.png" alt="Logo di Giochiamoci! APS" class="logo">
+            
+            <!-- Sotto-oggetto verticale per i testi -->
+            <div class="testi-header">
+                <h1>Giochiamoci! APS</h1>
+                <p class="motto">Perché anche giocare è un diritto di tutti!</p>
+            </div>
+    
+        </div>
 
         <!-- **QUESTO E' IL MENU DI NAVIGAZIONE** -->
         <nav>
@@ -88,8 +98,42 @@
             <!-- **SEZIONE CONTATTI** -->
         <section id="contatti">
             <h2>Contatti: Entra in contatto con noi</h2>
-            <p>Se hai domande, vuoi saperne di più sui nostri progetti o desideri collaborare con noi, non esitare a contattarci. Puoi inviarci un'email all'indirizzo <a href="mailto:info@giochiamoci.it">
-                info@giochiamoci.it</a> o seguirci sui nostri canali social per rimanere aggiornato sulle nostre attività e iniziative. Siamo sempre felici di connetterci con persone che condividono la nostra passione per i giochi accessibili e inclusivi.</p>
+            <p>Siamo sempre in cerca di nuove collaborazioni! Che tu sia una persona, un’associazione, un’azienda o un’altra realtà, puoi contattarci tramite il form sottostante e diventare parte del nostro percorso.</p>
+            <details>
+                <summary>Form di contatto</summary>
+                <form action="https://formsubmit.co/tuoindirizzo@email.com" method="POST">
+    
+                    <!-- CAMPO: NOME E COGNOME -->
+                    <label for="nome-cognome">Nome e cognome (obbligatorio):</label>
+                    <input type="text" id="nome-cognome" name="nome_cognome" required>
+                    
+                    <!-- CAMPO: EMAIL -->
+                    <label for="email">Indirizzo mail (obbligatorio):</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <!-- CAMPO: SOCIETÀ/ENTE -->
+                    <label for="ente-azienda">Società, ente o azienda (facoltativo):</label>
+                    <input type="text" id="ente-azienda" name="ente_azienda">
+                    
+                    <!-- CAMPO: MOTIVAZIONE (MENÙ A TENDINA) -->
+                    <label for="motivo-contatto">Perché ci contatti?</label>
+                    <select id="motivo-contatto" name="motivo_contatto" required>
+                        <option value="" disabled selected>Seleziona un'opzione...</option>
+                        <option value="diventare-socio">Diventare socio</option>
+                        <option value="invito-evento">Invitarvi in uno spazio-evento</option>
+                        <option value="costruire-gioco">Costruire un gioco accessibile</option>
+                        <option value="altro">Altro</option>
+                    </select>
+                    
+                    <!-- CAMPO: MESSAGGIO -->
+                    <label for="messaggio">Spazio per scrivere:</label>
+                    <textarea id="messaggio" name="messaggio" rows="6" required></textarea>
+                    
+                    <!-- BOTTONE DI INVIO -->
+                    <button type="submit">Invia messaggio</button>
+                
+                </form>
+            </details>
         </section>
 
         <!-- **GIOCA CON NOI** -->
@@ -127,11 +171,29 @@
         <!-- **SEZIONE GIOCHI DA TAVOLO** -->
         <section id="giochi-da-tavolo">
             <h2>Giochi da Tavolo: Divertimento per tutti</h2>
-            <p>Adattiamo giochi da tavolo per renderli accessibili a persone con disabilità visiva, motoria e cognitiva. Utilizziamo materiali tattili, tecnologie assistive e design inclusivo per garantire che ogni giocatrice possa partecipare attivamente al gioco. Organizziamo eventi di gioco da tavolo accessibili in tutta Italia, creando spazi accoglienti e inclusivi per tutte le persone.</p>
-            <h3>Scopri i nostri giochi da tavolo</h3>
-            <ul>
-                <li><a href="giochi_da_tavolo.html">Giochi da Tavolo Accessibili</a></li>
-            </ul>
+            <p>Qui trovi i regolamenti e i materiali per giocare ai giochi da tavolo che portiamo ai nostri eventi o su cui stiamo lavorando. Per ognuno, abbiamo indicato il regolamento, le caratteristiche di accessibilità e le modifiche fatte da noi o da altre per adattarlo.</p>
+            <p>Vuoi giocare alle nostre proposte in privato? Contattaci per capire se e come possiamo aiutarti a costruirle per te.</p>
+            <h3>Scopri i nostri giochi da tavolo adattati</h3>
+            <details>
+                <summary>Il gioco del labirinto</summary>
+                <p>Un gioco di percorso in cui i giocatori devono raggiungere un obiettivo superando ostacoli e risolvendo enigmi lungo il cammino. Abbiamo adattato il gioco con materiali tattili, carte in braille e regole semplificate per renderlo accessibile a persone con disabilità visiva e cognitiva.</p>
+            </details>
+            <details>
+                <summary>Il gioco del labirinto</summary>
+                <p>Un gioco di percorso in cui i giocatori devono raggiungere un obiettivo superando ostacoli e risolvendo enigmi lungo il cammino. Abbiamo adattato il gioco con materiali tattili, carte in braille e regole semplificate per renderlo accessibile a persone con disabilità visiva e cognitiva.</p>
+            </details>
+            <details>
+                <summary>Il gioco del labirinto</summary>
+                <p>Un gioco di percorso in cui i giocatori devono raggiungere un obiettivo superando ostacoli e risolvendo enigmi lungo il cammino. Abbiamo adattato il gioco con materiali tattili, carte in braille e regole semplificate per renderlo accessibile a persone con disabilità visiva e cognitiva.</p>
+            </details>
+            <details>
+                <summary>Il gioco del labirinto</summary>
+                <p>Un gioco di percorso in cui i giocatori devono raggiungere un obiettivo superando ostacoli e risolvendo enigmi lungo il cammino. Abbiamo adattato il gioco con materiali tattili, carte in braille e regole semplificate per renderlo accessibile a persone con disabilità visiva e cognitiva.</p>
+            </details>
+            <details>
+                <summary>Il gioco del labirinto</summary>
+                <p>Un gioco di percorso in cui i giocatori devono raggiungere un obiettivo superando ostacoli e risolvendo enigmi lungo il cammino. Abbiamo adattato il gioco con materiali tattili, carte in braille e regole semplificate per renderlo accessibile a persone con disabilità visiva e cognitiva.</p>
+            </details>
         </section>
 
         <!-- **SEZIONE GIOCHI DI RUOLO** -->
