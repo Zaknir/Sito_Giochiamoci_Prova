@@ -110,7 +110,7 @@ form button {
 
 /* 4. Dimensioni del logo */
 .logo {
-    max-height: 200px;    /* Regola l'altezza in base a quanto vuoi grandi i testi */
+    max-height: 10ch;    /* Regola l'altezza in base a quanto vuoi grandi i testi */
     width: auto;
 }
 
