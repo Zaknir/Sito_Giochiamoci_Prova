@@ -114,6 +114,36 @@ form button {
     width: auto;
 }
 
+/* --- REGOLE PER MOBILE (Schermi sotto i 480px) --- */
+@media (max-width: 480px) {
+    
+    /* Forza il logo a stare SOPRA e i testi SOTTO, tutto centrato */
+    .header-main-box {
+        flex-direction: column; 
+        align-items: center;    /* Centra il logo e il blocco testi orizzontalmente */
+        text-align: center;     /* Centra il testo dentro all'H1 e al p */
+        gap: 12px;              /* Spazio verticale tra il logo e il titolo */
+    }
+
+    /* Rimpicciolisci il logo per non rubare troppo spazio verticale */
+    .logo {
+        max-height: 60px;
+        width: auto;
+    }
+
+    /* Gestione dei font per evitare che le parole si spezzino male */
+    .testi-header h1 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .testi-header .motto {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin-top: 5px;
+    }
+}
+
 nav {
   margin-top: 20px;
 }
