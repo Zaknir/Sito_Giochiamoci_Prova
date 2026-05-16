@@ -20,4 +20,15 @@ header, section, footer {
   padding: 20px;
   margin: 10px;
   border-radius: 15px;
+  border: 1px solid violet;
+}
+
+/* header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Serve a farlo stare sopra agli altri elementi
+} */
+
+html {
+  scroll-behavior: smooth;
 }
