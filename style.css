@@ -1,4 +1,4 @@
-/* CSS ACCESSBILE "GIOCHIAMOCI!" - VERSIONE CENTRATA */
+/* CSS ACCESSIBILE "GIOCHIAMOCI!" - VERSIONE CENTRATA CON NAVIGAZIONE ORIZZONTALE */
 
 :root {
   --bg-pergamena: #f4ead2;    /* Sfondo esterno */
@@ -24,7 +24,7 @@ body {
   word-spacing: 0.2em;
 }
 
-/* 2. IL CONTENITORE CENTRALE (Risolve il problema dello schermo largo) */
+/* 2. IL CONTENITORE CENTRALE */
 .container {
   max-width: 850px;           /* Larghezza ottimale per la lettura */
   width: 100%;
@@ -44,7 +44,6 @@ h1, h2, h3 {
 
 p, li {
   margin-bottom: 1.5em;
-  /* Non serve max-width qui perché lo gestisce il .container */
 }
 
 /* 4. LINK CON RIQUADRO E STATO VISITATO */
@@ -72,7 +71,65 @@ a:hover, a:focus, summary:hover, summary:focus {
   outline: none;
 }
 
-/* 5. BOTTONI */
+/* 5. NAVIGAZIONE ORIZZONTALE (INTEGRAZIONE) */
+
+/* Allinea le voci principali del menu in orizzontale */
+.navigation {
+  display: flex;
+  flex-wrap: wrap;        /* Permette al menu di andare a capo su schermi piccoli senza rompersi */
+  gap: 20px;              /* Spazio orizzontale e verticale tra le voci */
+  list-style-type: none;  /* Rimuove i pallini neri */
+  padding: 0;
+  margin: 0 0 2em 0;      /* Margine inferiore per staccare la nav dal contenuto */
+}
+
+/* Rende i LI della barra principale il punto di riferimento per il posizionamento delle tendine */
+.navigation > li {
+  position: relative;
+  margin-bottom: 0;       /* Rimuove il margine inferiore standard dei LI per la barra principale */
+}
+
+/* Rende il tag summary un blocco cliccabile coerente */
+.navigation summary {
+  display: list-item;     /* Mantiene la freccetta nativa del browser */
+  cursor: pointer;
+}
+
+/* 6. SOTTOMENU A TENDINA (SUBNAVIGATION) */
+
+/* Rende la tendina fluttuante sopra il contenuto del foglio */
+.subnavigation {
+  position: absolute;
+  top: 100%;              /* Appare subito sotto la voce principale */
+  left: 0;
+  min-width: 250px;       /* Larghezza minima per evitare un ritorno a capo aggressivo del testo */
+  background-color: var(--bg-foglio); /* Usa lo stesso sfondo chiaro del foglio */
+  list-style-type: none;  /* Rimuove i pallini */
+  padding: 15px;
+  margin: 8px 0 0 0;
+  border: 2px solid var(--text-scuro); /* Bordo scuro coerente con lo stile */
+  border-radius: 10px;    /* Angoli arrotondati coerenti */
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.1); 
+  z-index: 100;           /* Sovrasta il testo del tag <main> */
+}
+
+/* Dispone le voci interne della tendina in verticale, una sotto l'altra */
+.subnavigation li {
+  margin-bottom: 12px;
+  line-height: 1.4;       /* Compatta leggermente l'interlinea nel sottomenu */
+}
+
+.subnavigation li:last-child {
+  margin-bottom: 0;       /* Rimuove il margine dall'ultima voce */
+}
+
+/* Rende i link interni alla tendina dei blocchi per facilitare il clic */
+.subnavigation a {
+  display: block;
+  padding: 4px 6px;
+}
+
+/* 7. BOTTONI */
 button {
   font-family: Verdana, sans-serif;
   background-color: var(--accent-green);
@@ -92,14 +149,4 @@ button:hover {
 ::selection {
   background: var(--accent-yellow);
   color: var(--text-scuro);
-}
-
-.navigation {
-  list-style-type: none; /* Rimuove il pallino nero visibile */
-  padding: 0;
-  margin: 0;
-}
-
-.subnavigation {
-  list-style-type: none; /* Rimuove il pallino nero visibile */
 }
