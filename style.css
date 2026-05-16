@@ -115,7 +115,7 @@ form button {
 }
 
 /* --- REGOLE PER MOBILE (Schermi sotto i 480px) --- */
-@media (max-width: 480px) {
+@media (max-width: 800px) {
     
     /* Forza il logo a stare SOPRA e i testi SOTTO, tutto centrato */
     .header-main-box {
@@ -127,7 +127,7 @@ form button {
 
     /* Rimpicciolisci il logo per non rubare troppo spazio verticale */
     .logo {
-        max-height: 60px;
+        max-height: 100px;
         width: auto;
     }
 
